@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FBB117;
+}
+
+#cardText {
+    font-size: 24px;
+}
+
+#drawButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#drawButton:hover {
+    background-color: #45a049;
+}
+
+#cardStack {
+    width: calc(100vw - 96px);
+    height: calc(var(--h) - 100px - 98px - 66px);
+    max-height: 540px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-card] {
+    position: absolute;
+    margin-bottom: 48px;
+    background: #fff;
+    border-radius: 21px;
+    text-align: center;
+    transition: ease all .4s;
+    opacity: 1;
+    box-shadow: 0 10px 20px -10px rgba(162,121,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 96px);
+    max-width: 360px;
+    max-height: calc(var(--h) - 100px - 98px - 66px - 20px);
+    height: calc(130vw - 96px);
+    z-index: 5;
+    max-height: 500px;
+    cursor: pointer;
+}
+
+.face-one, .face-two {
+    font-size: 24px;
+    font-weight: 700;
+    display: inline-flex;
+    flex-direction: column;
+    line-height: .9em;
+    position: absolute;
+}
+
+.card-action-wrap {
+    max-width: calc(100% - 32px);
+    padding: 0 0 12px;
+}
+
+.face-one {
+    top: 16px;
+    left: 16px;
+}
+
+.face-two {
+    bottom: 16px;
+    right: 16px;
+    transform: rotate(180deg);
+}
